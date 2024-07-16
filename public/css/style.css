@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(236, 224, 226);
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+h1 {
+    margin-top: 20px;
+}
