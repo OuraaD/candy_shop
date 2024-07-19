@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	<main>
+		<h1>Catégorie des bonbons</h1>
+		<a href={{path('admin_category_index')}}>
+			Accueil</a>
+		<table  class='table tble-striped'>
+			{% for categorie in categories %}
+				<tr>
+					<td>{{categorie.name}}</td>
+					<td>{{categorie.description}}</td>
+					<td>{{categorie.createAt|date("m/d/y")}}</td>
+				</tr>
+			{% endfor %}
+		</table>
+	</main>
+{% endblock %}

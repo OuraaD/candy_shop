@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(236, 224, 226);
+    background-color: #a1005046;
     display: flex;
     justify-content: center; 
     align-items: flex-start; 
@@ -9,4 +9,9 @@ body {
 
 h1 {
     margin-top: 20px;
+}
+
+.img{
+    width: 150px;
+    height: 60px;
 }

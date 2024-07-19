@@ -1,18 +1,22 @@
 {% extends "base.html.twig" %}
-{% block stylesheets %}
-<link rel="stylesheet" href="{{asset('css/style.css')}}">
-{% endblock %}
-
-{% block title %}
-Oura
-{% endblock %}
-
 {% block body %}
 
-<main>
-<h1>Nos Candies</h1>
-</main>
-
-
-
+    <main>
+        <h1>Candies</h1>
+        <table class='table tble-striped'>
+        <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Date de création</th>
+        <th>Modifier</th></tr>
+            {% for bonbon in bonbons %}
+                <tr>
+                    <td>{{bonbon.name}}</td>
+                    <td>{{bonbon.description}}</td>
+                    <td>{{bonbon.createAt|date("m/d/y")}}</td>
+                    <td><a href={{path('admin_article_update',{id:bonbon.id})}}>Modifier</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
 {% endblock %}

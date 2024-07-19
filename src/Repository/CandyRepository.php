@@ -16,28 +16,28 @@ class CandyRepository extends ServiceEntityRepository
         parent::__construct($registry, Candy::class);
     }
 
-    //    /**
-    //     * @return Candy[] Returns an array of Candy objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('c.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+//    /**
+//     * @return Candy[] Returns an array of Candy objects
+//     */
+//    public function findByExampleField($value): array
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->orderBy('c.id', 'ASC')
+//            ->setMaxResults(10)
+//            ->getQuery()
+//            ->getResult()
+//        ;
+//    }
 
-    //    public function findOneBySomeField($value): ?Candy
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+//    public function findOneBySomeField($value): ?Candy
+//    {
+//        return $this->createQueryBuilder('c')
+//            ->andWhere('c.exampleField = :val')
+//            ->setParameter('val', $value)
+//            ->getQuery()
+//            ->getOneOrNullResult()
+//        ;
+//    }
 }

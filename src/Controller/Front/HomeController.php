@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/', name: 'home_index')]
+    #[Route('/', name: 'Front_home_index')]
 
     public function index(): Response
     {

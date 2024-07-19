@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+{% block body %}
+	<main>
+		<h1>Modifier la catégorie des bonbons</h1>
+		{{form_start(formulaire)}}
+		{{form_rest(formulaire)}}
+		<input type="submit" value='mettre à jour'>
+		{{form_end(formulaire)}}
+	</main>
+{% endblock %}

@@ -2,39 +2,29 @@
 
 namespace App\Entity;
 
-use App\Repository\CandyRepository;
+use App\Repository\CategoryRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
-#[ORM\Entity(repositoryClass: CandyRepository::class)]
-class Candy
+#[ORM\Entity(repositoryClass: CategoryRepository::class)]
+class Category
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
 
-    #[Assert\Sequentially([
-        new Assert\NotBlank(message:"Le champ {{ label }} est plus que necessaire"),
-        new Assert\Length(min:1,max:30,minMessage:'La taille minimum pour le champ est de {{ limit }}',maxMessage:'La taille maximum pour le champ est de {{ limit }}'),
-        new Assert\Type('string')
-    ])]
-
-    #[Assert\NotBlank]
     #[ORM\Column(length: 255)]
-    private ?string $name = '';
+    private ?string $name = null;
 
-    #[Assert\NotBlank]
-    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $createAt = null;
 
-    
-    #[ORM\Column(length: 255)]
-    private ?string $slug = null;
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $updateAt = null;
 
     public function getId(): ?int
     {
@@ -58,7 +48,7 @@ class Candy
         return $this->description;
     }
 
-    public function setDescription(?string $description): static
+    public function setDescription(string $description): static
     {
         $this->description = $description;
 
@@ -77,14 +67,14 @@ class Candy
         return $this;
     }
 
-    public function getSlug(): ?string
+    public function getUpdateAt(): ?\DateTimeImmutable
     {
-        return $this->slug;
+        return $this->updateAt;
     }
 
-    public function setSlug(string $slug): static
+    public function setUpdateAt(\DateTimeImmutable $updateAt): static
     {
-        $this->slug = $slug;
+        $this->updateAt = $updateAt;
 
         return $this;
     }
