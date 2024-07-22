@@ -1,13 +1,14 @@
 {% extends "base.html.twig" %}
 {% block body %}
-<main>
-<h1>Nos Candies </h1>
 	<main>
-		<h1>Mis à jour</h1>
-		{{form_start(formulaire_candy)}}
-		{{form_rest(formulaire_candy)}}
-		<input type="submit" value="mise à jour">
-		{{form_end(formulaire_candy)}}
+		<h1>Nos Candies
+		</h1>
+		<main>
+			<h1>Mis à jour</h1>
+			{{form_start(formulaire_contact)}}
+			{{form_rest(formulaire_contact)}}
+			<input type="submit" value="send">
+			{{form_end(formulaire_contact)}}
+		</main>
 	</main>
-</main>
 {% endblock %}
